@@ -13,3 +13,10 @@ window.addEventListener("mousemove", (e) => {
 		layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
 	});
 });
+
+
+document.querySelector(".navbar").addEventListener('click', e =>
+{
+    if (!e.target.classList.contains("link")) return;
+    
+})

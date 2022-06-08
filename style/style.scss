@@ -10,21 +10,10 @@
 
 body {
 	height: 100vh;
-	width: 100vw;
-	overflow-x: hidden;	
+	overflow: hidden;
 	font-size: 62.5%;
 	font-family: "Bebas Neue", cursive;
 	position: relative;
-}
-
-.container {
-	height: 100%;
-	scroll-snap-type: y mandatory;
-	overflow-y: scroll;
-}
-.section {
-	height: 100vh;
-	overflow: hidden;
 	background-image: linear-gradient(
 		to right top,
 		#051937,
@@ -36,10 +25,50 @@ body {
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
 	background-repeat: no-repeat;
+}
+
+.navbar {
+	height: 4rem;
+	width: 100%;
+	position:fixed;
+	top: 0;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: transparent;
+	z-index: 100;
+	border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+	backdrop-filter: blur(30px);
+}
+
+.link {
+	font-size: 2.5rem;
+		text-transform: uppercase;
+		color: rgba($color: #fff, $alpha: 0.7);
+		text-decoration: none;
+		transition: all 200ms;
+
+		&:hover{
+			color: rgba($color: #fff, $alpha: 1.0);
+		}
+}
+
+
+
+.container {
+	height: 100%;
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+}
+.section {
+	height: 100vh;
+	overflow: hidden;
 	position: relative;
 	display: flex;
 	align-items: center;
 	scroll-snap-align: start;
+	border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);
 }
 
 .header {
@@ -100,8 +129,13 @@ body {
 	filter: blur(7px);
 }
 
-::-webkit-scrollbar {
-	display: none;
+::-webkit-scrollbar{
+	width: 0.7rem;
+	background-color: transparent;
+	z-index: 100;
+
 }
-
-
+::-webkit-scrollbar-thumb{
+	background-color: rgba($color: #fff, $alpha: 0.5);
+	border-radius: 0.2rem;
+}
