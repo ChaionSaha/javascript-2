@@ -14,9 +14,9 @@ window.addEventListener("mousemove", (e) => {
 	});
 });
 
-
-document.querySelector(".navbar").addEventListener('click', e =>
-{
-    if (!e.target.classList.contains("link")) return;
-    
-})
+document.querySelector(".navbar").addEventListener("click", (e) => {
+	e.preventDefault();
+	if (!e.target.classList.contains("link")) return;
+	let href = e.target.getAttribute("href");
+	document.querySelector(href).scrollIntoView({ behavior: "smooth" });
+});
