@@ -145,7 +145,7 @@ body {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items:center;
 	flex-direction: column;
 
 	color: #fff;
@@ -157,6 +157,7 @@ body {
 		background-color: transparent;
 		outline: none;
 		border: 1px solid rgba($color: #fff, $alpha: 0.3);
+					backdrop-filter: blur(30px);
 		transition: all 400ms;
 		color: #fff;
 		&::placeholder {
@@ -169,7 +170,7 @@ body {
 			border: none;
 			border: 1px solid rgba($color: #fff, $alpha: 1);
 			box-shadow: 0 0 5rem rgba($color: #fff, $alpha: 0.8);
-			backdrop-filter: blur(30px);
+
 			&::placeholder {
 				color: rgba($color: #fff, $alpha: 1);
 				font-weight: 300;
@@ -179,10 +180,13 @@ body {
 
 	& p {
 		border: 1px solid rgba($color: #fff, $alpha: 0.3);
+		backdrop-filter: blur(30px);
 		width: 18rem;
 		height: 3.5rem;
 		padding: 0.7rem;
 		font-weight: 200;
+		overflow-x: auto;
+		overflow-y: hidden;
 	}
 
 	& button {
@@ -203,6 +207,9 @@ body {
 	}
 }
 
+.clear-1{
+	transform: translateX(1.3rem);
+}
 .dec-bin {
 	display: flex;
 	margin-bottom: 2rem;
@@ -301,7 +308,8 @@ body {
 }
 
 .output {
-	font-size: 2rem;
+	font-size: 1.7rem;
+	font-weight: 200;
 }
 
 ::-webkit-scrollbar {

@@ -152,6 +152,7 @@ body {
   background-color: transparent;
   outline: none;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(30px);
   transition: all 400ms;
   color: #fff;
 }
@@ -166,7 +167,6 @@ body {
   border: none;
   border: 1px solid white;
   box-shadow: 0 0 5rem rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(30px);
 }
 
 .sec-1-in-out input:focus::placeholder {
@@ -176,10 +176,13 @@ body {
 
 .sec-1-in-out p {
   border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(30px);
   width: 18rem;
   height: 3.5rem;
   padding: 0.7rem;
   font-weight: 200;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .sec-1-in-out button {
@@ -197,6 +200,10 @@ body {
 
 .sec-1-in-out button:hover {
   border-color: white;
+}
+
+.clear-1 {
+  transform: translateX(1.3rem);
 }
 
 .dec-bin {
@@ -297,7 +304,8 @@ body {
 }
 
 .output {
-  font-size: 2rem;
+  font-size: 1.7rem;
+  font-weight: 200;
 }
 
 ::-webkit-scrollbar {
