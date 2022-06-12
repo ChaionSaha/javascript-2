@@ -308,6 +308,10 @@ body {
   font-weight: 200;
 }
 
+.task-2-clear {
+  margin-left: 1rem;
+}
+
 ::-webkit-scrollbar {
   width: 0.7rem;
   background-color: transparent;

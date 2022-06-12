@@ -16,6 +16,13 @@ document.querySelector(".task-2").addEventListener("click", (e) => {
 	output.innerText = `Frequency of the word "${word}" is: ${count}`;
 });
 
+document.querySelector(".task-2-clear").addEventListener("click", (e) => {
+	e.preventDefault();
+	stringInput.value = '';
+	wordInput.value = '';
+	output.innerText = '';
+});
+
 ///////////////////////////////////////////////////
 // Task 1
 const decIn = document.querySelector(".dec-in");
@@ -55,3 +62,4 @@ document.querySelector(".clear-1").addEventListener("click", (e) => {
 		el.innerText = `Decimal Output`;
 	});
 });
+
