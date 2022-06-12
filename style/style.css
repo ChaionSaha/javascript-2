@@ -1,8 +1,8 @@
 *,
 *::after,
 *::before {
-  font-size: inherit;
   font-family: inherit;
+  font-size: inherit;
   box-sizing: border-box;
   margin: 0;
   padding: 0;

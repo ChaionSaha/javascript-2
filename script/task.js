@@ -7,6 +7,7 @@ document.querySelector(".task-2").addEventListener("click", (e) => {
 	e.preventDefault();
 	let string = stringInput.value.toLowerCase();
 	let word = wordInput.value.toLowerCase();
+	console.log(string, word);
 	let count = 0;
 	string.split(" ").forEach((el) => {
 		if (el !== word) return;
@@ -47,7 +48,7 @@ document.querySelector(".clear-1").addEventListener("click", (e) => {
 		el.value = "";
 	});
 	document.querySelectorAll(".out-1").forEach((el, i) => {
-		if ((i === 0)) {
+		if (i === 0) {
 			el.innerText = `Binary Output`;
 			return;
 		}
